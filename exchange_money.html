@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    body{
+        background-color: #eae5e182;
+    }
+    h3{
+        background: #00CC99;
+        text-align: center;
+        font-size: 60px;
+        padding: 20px 1em;
+        font-weight: bold;
+        margin-left: 35%;
+        margin-right: 35%;
+        cursor: pointer;
+        font-family: "Times New Roman";
+        border: solid;
+    }
+    fieldset{
+        width: 45%;
+        margin: auto;
+        border: 1px solid #000;
+        border-width: 5px;
+        padding: 12px;
+        display: inline-block;
+        background-color: #00CC99;
+
+    }
+    input[type=button]{
+        width: 80px;
+        height: 43px;
+        font-weight: bold;
+
+    }
+    input[type=reset]{
+        width: 90px;
+        height: 43px;
+        font-weight: bold;
+    }
+    form{
+        text-align: center;
+    }
+    .class{
+        text-align: center;
+        
+    }
+
+</style>
+<script>
+
+    function currencyConverter(valNum) {
+        if (converter.vnd.value <= 0)
+            window.alert('Enter value Greater than 0');
+
+        else {
+
+            document.getElementById('dollar').value = (valNum / 23000).toFixed(2);
+            document.getElementById('yuan').value = (valNum / 10000).toFixed(2);
+            document.getElementById('won').value = (valNum / 5000).toFixed(2);
+            document.getElementById('dinar').value = (valNum / 13000).toFixed(2);
+
+        }
+    }
+
+</script>
+<body>
+
+<h3>Wellcome to my Cerrency Converter</h3>
+
+
+<form name="converter">
+    <fieldset>
+        <div class="class">
+            <label>VND(VietNam): </label>
+
+            <input type="number" name="vnd" required>
+            <input type="button" value="convert" onclick="currencyConverter(converter.vnd.value)"><br/><br/>
+
+            <label>Dollar(American):</label>
+            <input id="dollar"><br/><br/>
+
+            <label>Yuan(China):</label>
+            <input id="yuan"><br/><br/>
+
+            <label>Won(Karea):</label>
+            <input id="won"><br/><br/>
+
+            <label>JAPAN(Yen):</label>
+            <input id="dinar"><br/><br/>
+
+            <input type="reset" value="Reset Form">
+            <p align="center">You can press the Reset Button for reseting the form</p>
+        </div>
+    </fieldset>
+
+</form>
+</body>
+</html>
