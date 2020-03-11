@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>love me or not</title>
+</head>
+<style>
+    #myBtn{
+        position: absolute;
+    }
+</style>
+<body>
+<h2>Do You Love Me?</h2><br/>
+<button type="button" id="yes" onclick="yes()">yes</button>
+<button type="button" id="myBtn" onmouseover="myFunction()">no</button>
+<script>
+    
+    function yes() {
+        alert('right choice!');
+    }
+    function myFunction() {
+        let w=window.innerWidth;
+        document.documentElement.clientWidth;
+        document.body.clientWidth;
+        let h=window.innerHeight;
+        document.documentElement.clientHeight;
+        document.body.clientHeight;
+        document.getElementById("myBtn").style.left = "100px";
+
+    }
+
+
+</script>
+</body>
+</html>
